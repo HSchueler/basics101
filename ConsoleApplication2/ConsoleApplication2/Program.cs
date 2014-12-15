@@ -10,7 +10,25 @@ namespace ConsoleApplication2
     {
         static void Main(string[] args)
         {
-            //test
+            //Fibonacci Sequence up to 15 characters
+            int curfib = 1;
+            int oldfib = 0;  //init variables
+            int temp = 0;
+
+            Console.WriteLine(oldfib);
+            Console.WriteLine(curfib);
+
+            for (int i = 0; i < 13; i++)
+            {
+                temp = curfib;
+                curfib = curfib + oldfib; //fibonacci calculation
+                oldfib = temp;
+
+                Console.WriteLine(curfib);
+            }
+
+            Console.ReadKey(); //Use readkey so the program doesn't auto exit after completion
+
         }
     }
 }
